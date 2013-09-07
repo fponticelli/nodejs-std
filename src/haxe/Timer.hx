@@ -32,9 +32,11 @@ class Timer {
 
 	#if js
 	private static var arr = new Array<Timer>();
-	private var timerId : Int;
   #if (nodejs || nodejs_std)
   private var interval:Int;
+  private var timerId : {};
+  #else
+  private var timerId : Int;
   #end
 	#end
 
